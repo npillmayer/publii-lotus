@@ -1,0 +1,34 @@
+<footer class="footer">
+   <div class="container footer__inner">
+      {{#if menus.footerMenu}}
+         <nav class="footer__nav">
+            {{> menu menus.footerMenu}}
+         </nav>
+      {{/if}}
+
+      {{#if @config.custom.copyrightText}}
+         <div class="footer__copyright">
+            {{{@config.custom.copyrightText}}}
+         </div>
+      {{/if}}
+
+      {{#if @config.custom.backToTopButton}}
+         <a class="footer__bttop" href="#top" aria-label="{{ translate 'partials.footer.backToTop' }}">
+            {{ translate 'partials.footer.backToTop' }}
+         </a>
+      {{/if}}
+   </div>
+</footer>
+
+<script async src="{{js "scripts.js"}}"></script>
+
+{{! code injection by a Custom HTML tool }}
+   {{{@footerCustomCode}}}
+{{! /code injection by a Custom HTML tool }}
+
+{{! helper for creating footer output with Publii-related tags. Currently used for GDPR cookies popup }}
+   {{{ publiiFooter }}}
+{{! /helper for creating footer output with Publii-related tags. Currently used for GDPR cookies popup }}
+
+</body>
+</html>

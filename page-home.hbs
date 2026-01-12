@@ -1,0 +1,121 @@
+{{> head}}
+<main class="home">
+    <section class="masthead">
+        <div class="masthead__portrait">
+            {{#if @config.custom.homePortraitLink}}
+            <a href="{{@config.custom.homePortraitLink}}" class="masthead__portrait-link">
+            {{/if}}
+            {{#if @website.logo}}
+                <img
+                    src="{{@website.logo}}"
+                    class="masthead__logo {{#checkIf @config.custom.homeLogoFit '==' 'contain'}}masthead__logo--contain{{/checkIf}}"
+                    {{lazyload "eager"}}
+                    alt="{{@website.name}}">
+            {{else}}
+                {{#if @config.custom.homePortrait}}
+                <img
+                    src="{{@config.custom.homePortrait}}"
+                    {{#if @config.site.responsiveImages}}
+                        {{responsiveImageAttributes @config.custom.homePortrait}}
+                    {{/if}}
+                    {{lazyload "eager"}}
+                    {{imageDimensions @config.custom.homePortrait}}
+                    alt="{{@config.custom.homePortraitAlt}}">
+                {{else}}
+                <img
+                    src="{{@website.assetsUrl}}/img/rl-face-stripe-lightgrey.png"
+                    {{lazyload "eager"}}
+                    alt="Robert Lemann portrait">
+                {{/if}}
+            {{/if}}
+            {{#if @config.custom.homePortraitLink}}
+            </a>
+            {{/if}}
+        </div>
+        <div class="container masthead__inner">
+            <div class="masthead__identity">
+                <h1>
+                    <span class="masthead__name">{{@config.custom.homeTitle}}</span>
+                    <span class="masthead__tagline">{{@config.custom.homeTagline}}</span>
+                </h1>
+            </div>
+            <div class="masthead__nav">
+                {{#if menus.mainMenu}}
+                    {{> menu menus.mainMenu}}
+                {{/if}}
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner__media">
+                {{#if @config.custom.bannerImage}}
+                    <img
+                        src="{{@config.custom.bannerImage}}"
+                        {{#if @config.site.responsiveImages}}
+                            {{responsiveImageAttributes @config.custom.bannerImage}}
+                        {{/if}}
+                        {{lazyload "eager"}}
+                        {{imageDimensions @config.custom.bannerImage}}
+                        alt="{{@config.custom.bannerImageAlt}}">
+                {{else}}
+                    <img
+                        src="{{@website.assetsUrl}}/img/typewriter.png"
+                        {{lazyload "eager"}}
+                        alt="Typewriter on wooden desk">
+                {{/if}}
+            </div>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="container">
+            <div class="contact-widget">
+                {{{@config.custom.contactHtml}}}
+            </div>
+            <div class="info__grid">
+                <div class="info__card">
+                    <h3>{{@config.custom.topicTitle}}</h3>
+                    <p>{{@config.custom.topicText}}</p>
+                    {{#if @config.custom.topicLinkUrl}}
+                        <a class="text-link" href="{{@config.custom.topicLinkUrl}}">
+                            {{@config.custom.topicLinkLabel}}
+                        </a>
+                    {{/if}}
+                </div>
+                <div class="info__card">
+                    <h3>{{@config.custom.booksTitle}}</h3>
+                    <p>{{@config.custom.booksText}}</p>
+                    {{#if @config.custom.booksLinkUrl}}
+                        <a class="text-link" href="{{@config.custom.booksLinkUrl}}">
+                            {{@config.custom.booksLinkLabel}}
+                        </a>
+                    {{/if}}
+                </div>
+                <div class="info__card">
+                    <h3>{{@config.custom.articlesTitle}}</h3>
+                    <p>{{@config.custom.articlesText}}</p>
+                    {{#if @config.custom.articlesLinkUrl}}
+                        <a class="text-link" href="{{@config.custom.articlesLinkUrl}}">
+                            {{@config.custom.articlesLinkLabel}}
+                        </a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{#page}}
+        {{#if text}}
+            <section class="home-content">
+                <div class="container">
+                    <div class="home-content__body">
+                        {{{text}}}
+                    </div>
+                </div>
+            </section>
+        {{/if}}
+    {{/page}}
+</main>
+{{> footer}}

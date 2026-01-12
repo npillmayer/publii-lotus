@@ -1,0 +1,75 @@
+{{> head}}
+<main class="posts-page">
+   <section class="masthead">
+      <div class="masthead__portrait">
+         {{#if @config.custom.homePortraitLink}}
+         <a href="{{@config.custom.homePortraitLink}}" class="masthead__portrait-link">
+         {{/if}}
+         {{#if @website.logo}}
+            <img
+               src="{{@website.logo}}"
+               class="masthead__logo {{#checkIf @config.custom.homeLogoFit '==' 'contain'}}masthead__logo--contain{{/checkIf}}"
+               {{lazyload "eager"}}
+               alt="{{@website.name}}">
+         {{else}}
+            {{#if @config.custom.homePortrait}}
+            <img
+               src="{{@config.custom.homePortrait}}"
+               {{#if @config.site.responsiveImages}}
+                  {{responsiveImageAttributes @config.custom.homePortrait}}
+               {{/if}}
+               {{lazyload "eager"}}
+               {{imageDimensions @config.custom.homePortrait}}
+               alt="{{@config.custom.homePortraitAlt}}">
+            {{else}}
+            <img
+               src="{{@website.assetsUrl}}/img/rl-face-stripe-lightgrey.png"
+               {{lazyload "eager"}}
+               alt="Robert Lemann portrait">
+            {{/if}}
+         {{/if}}
+         {{#if @config.custom.homePortraitLink}}
+         </a>
+         {{/if}}
+      </div>
+      <div class="container masthead__inner">
+         <div class="masthead__nav">
+            {{#if menus.mainMenu}}
+               {{> menu menus.mainMenu}}
+            {{/if}}
+         </div>
+      </div>
+   </section>
+   <div class="container">
+      <header class="posts-page__header">
+         <h1>{{@config.custom.postsPageTitle}}</h1>
+      </header>
+      <div class="posts-layout">
+         <div class="posts-layout__main">
+            <div class="posts-page__list">
+               {{#each posts}}
+                  <article class="posts-page__item">
+                     <h2>
+                        <a href="{{url}}">{{title}}</a>
+                     </h2>
+                     <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                        {{date createdAt}}
+                     </time>
+                     {{#if hasCustomExcerpt}}
+                        {{{ excerpt }}}
+                     {{else}}
+                        <p>{{{ excerpt }}}</p>
+                     {{/if}}
+                  </article>
+               {{/each}}
+            </div>
+
+            {{> pagination}}
+         </div>
+         <aside class="posts-layout__sidebar">
+            {{> sidebar}}
+         </aside>
+      </div>
+   </div>
+</main>
+{{> footer}}

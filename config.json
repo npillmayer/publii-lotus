@@ -1,0 +1,710 @@
+{
+  "name": "Lotus",
+  "version": "0.1.0.0",
+  "author": "Norbert Pillmayer",
+  "renderer": {
+    "relatedPostsNumber": 3,
+    "renderRelatedPosts": true,
+    "renderSimilarPosts": false,
+    "renderPrevNextPosts": true,
+    "createContentStructure": true,
+    "includeFeaturedInPosts": true,
+    "tagsIncludeFeaturedInPosts": true,
+    "authorsIncludeFeaturedInPosts": true,
+    "featuredPostsNumber": 0,
+    "tagsFeaturedPostsNumber": 0,
+    "authorsFeaturedPostsNumber": 0,
+    "createTagPages": true,
+    "createAuthorPages": true,
+    "createTagsList": true,
+    "create404page": true,
+    "createSearchPage": true,
+    "customHTML": {
+      "beforePost": "Before every post",
+      "afterPost": "After every post",
+      "beforePage": "Before every page",
+      "afterPage": "After every page"
+    }
+  },
+  "supportedFeatures": {
+    "blockEditor": true,
+    "tagsList": true,
+    "tagPages": true,
+    "tagImages": true,
+    "authorPages": true,
+    "authorImages": true,
+    "searchPage": true,
+    "errorPage": true,
+    "customSearch": true,
+    "customComments": true,
+    "embedConsents": true,
+    "pages": true,
+    "postsPage": true
+  },
+  "pageTemplates": {
+    "home": "Homepage layout"
+  },
+  "menus": {
+    "mainMenu": {
+      "name": "Main menu",
+      "desc": "",
+      "maxLevels": -1
+    },
+    "footerMenu": {
+      "name": "Footer menu",
+      "desc": "",
+      "maxLevels": 1
+    }
+  },
+  "config": [
+    {
+      "name": "postsPerPage",
+      "label": "Posts per page",
+      "value": 12,
+      "type": "number"
+    },
+    {
+      "name": "tagsPostsPerPage",
+      "label": "Tags posts per page",
+      "value": 12,
+      "type": "number"
+    },
+    {
+      "name": "authorsPostsPerPage",
+      "label": "Authors posts per page",
+      "value": 12,
+      "type": "number"
+    },
+    {
+      "name": "excerptLength",
+      "label": "Excerpt length",
+      "value": 25,
+      "type": "number"
+    },
+    {
+      "name": "logo",
+      "label": "Website logo",
+      "value": "",
+      "type": "upload",
+      "upload": true
+    }
+  ],
+  "customConfig": [
+    {
+      "name": "mainWidth",
+      "label": "Main width",
+      "group": "Layout",
+      "value": "860px",
+      "type": "text"
+    },
+    {
+      "name": "sidebarWidth",
+      "label": "Sidebar width",
+      "group": "Layout",
+      "value": "300px",
+      "type": "text"
+    },
+    {
+      "name": "separator",
+      "type": "separator",
+      "label": "Homepage - Identity",
+      "group": "Homepage",
+      "size": "big"
+    },
+    {
+      "name": "homePortrait",
+      "label": "Portrait image",
+      "group": "Homepage",
+      "value": "",
+      "type": "upload",
+      "upload": true
+    },
+    {
+      "name": "homePortraitLink",
+      "label": "Portrait link URL",
+      "group": "Homepage",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "homeLogoFit",
+      "label": "Logo fit",
+      "group": "Homepage",
+      "note": "Choose how the website logo fills the hero band.",
+      "value": "cover",
+      "type": "select",
+      "options": [
+        {
+          "label": "Cover (crop to fill)",
+          "value": "cover"
+        },
+        {
+          "label": "Contain (no crop)",
+          "value": "contain"
+        }
+      ]
+    },
+    {
+      "name": "homeHeroHeight",
+      "label": "Portrait height",
+      "group": "Homepage",
+      "note": "Controls the vertical size of the top hero band.",
+      "value": "150px",
+      "type": "text"
+    },
+    {
+      "name": "homePortraitAlt",
+      "label": "Portrait image alt text",
+      "group": "Homepage",
+      "value": "Robert Lemann portrait",
+      "type": "text"
+    },
+    {
+      "name": "homeTitle",
+      "label": "Name",
+      "group": "Homepage",
+      "value": "Author",
+      "type": "text"
+    },
+    {
+      "name": "homeTagline",
+      "label": "Tagline",
+      "group": "Homepage",
+      "value": "this is a tagline about me",
+      "type": "text"
+    },
+    {
+      "name": "separator",
+      "type": "separator",
+      "label": "Homepage - Banner",
+      "group": "Homepage",
+      "size": "big"
+    },
+    {
+      "name": "bannerImage",
+      "label": "Banner image",
+      "group": "Homepage",
+      "value": "",
+      "type": "upload",
+      "upload": true
+    },
+    {
+      "name": "bannerImageAlt",
+      "label": "Banner image alt text",
+      "group": "Homepage",
+      "value": "Typewriter on wooden desk",
+      "type": "text"
+    },
+    {
+      "name": "separator",
+      "type": "separator",
+      "label": "Homepage - Contact",
+      "group": "Homepage",
+      "size": "big"
+    },
+    {
+      "name": "contactHtml",
+      "label": "Get in touch content",
+      "group": "Homepage",
+      "value": "<h2>Get in Touch</h2><p>Subscribe to infographics, short stories and other bonus material</p><p><a href=\"/contact/\">Contact</a></p>",
+      "type": "wysiwyg"
+    },
+    {
+      "name": "separator",
+      "type": "separator",
+      "label": "Homepage - Columns",
+      "group": "Homepage",
+      "size": "big"
+    },
+    {
+      "name": "topicTitle",
+      "label": "Column 1 title",
+      "group": "Homepage",
+      "value": "What's it about?",
+      "type": "text"
+    },
+    {
+      "name": "topicText",
+      "label": "Column 1 text",
+      "group": "Homepage",
+      "value": "I am interested in just about everything, but most of the time I focus on science, culture & society, and writing suspense stories. I believe in a growth mind-set and will never stop learning, meeting like-minded people along the way.",
+      "type": "textarea"
+    },
+    {
+      "name": "topicLinkLabel",
+      "label": "Column 1 link label",
+      "group": "Homepage",
+      "value": "learn more",
+      "type": "text"
+    },
+    {
+      "name": "topicLinkUrl",
+      "label": "Column 1 link URL",
+      "group": "Homepage",
+      "value": "/about/",
+      "type": "text"
+    },
+    {
+      "name": "booksTitle",
+      "label": "Column 2 title",
+      "group": "Homepage",
+      "value": "Books",
+      "type": "text"
+    },
+    {
+      "name": "booksText",
+      "label": "Column 2 text",
+      "group": "Homepage",
+      "value": "I write fiction books, mostly thrillers, as a suspense part-time undertaking. I usually process some interesting insights I've gained, wrapping them in riveting stories. They are available in multiple languages, most easily accessed on Amazon.",
+      "type": "textarea"
+    },
+    {
+      "name": "booksLinkLabel",
+      "label": "Column 2 link label",
+      "group": "Homepage",
+      "value": "explore Books",
+      "type": "text"
+    },
+    {
+      "name": "booksLinkUrl",
+      "label": "Column 2 link URL",
+      "group": "Homepage",
+      "value": "/books/",
+      "type": "text"
+    },
+    {
+      "name": "articlesTitle",
+      "label": "Column 3 title",
+      "group": "Homepage",
+      "value": "Articles",
+      "type": "text"
+    },
+    {
+      "name": "articlesText",
+      "label": "Column 3 text",
+      "group": "Homepage",
+      "value": "I collect the insights of my endeavour of lifelong learning by summing them up in non-fiction articles, in order to engage with interesting people. All my articles can be found here, although some of them may have been published elsewhere, too.",
+      "type": "textarea"
+    },
+    {
+      "name": "articlesLinkLabel",
+      "label": "Column 3 link label",
+      "group": "Homepage",
+      "value": "read Articles",
+      "type": "text"
+    },
+    {
+      "name": "articlesLinkUrl",
+      "label": "Column 3 link URL",
+      "group": "Homepage",
+      "value": "/posts/",
+      "type": "text"
+    },
+    {
+      "name": "separator",
+      "type": "separator",
+      "label": "Posts page",
+      "group": "Posts",
+      "size": "big"
+    },
+        {
+            "name": "postsPageTitle",
+            "label": "Posts page title",
+            "group": "Posts",
+            "value": "Posts",
+            "type": "text"
+        },
+        {
+            "name": "separator",
+            "type": "separator",
+            "label": "Footer",
+            "group": "Footer",
+            "size": "big"
+        },
+        {
+            "name": "copyrightText",
+            "label": "Copyright text",
+            "group": "Footer",
+            "value": "&copy; 2026 Your Name. All rights reserved.",
+            "type": "text"
+        },
+        {
+            "name": "backToTopButton",
+            "label": "Back to top button",
+            "group": "Footer",
+            "value": false,
+            "type": "checkbox"
+        },
+    {
+      "name": "separator",
+      "type": "separator",
+      "label": "Selected Posts",
+      "group": "Sidebar",
+      "size": "small"
+    },
+    {
+      "name": "selectedPosts",
+      "label": "Source",
+      "group": "Sidebar",
+      "note": "Display posts from the specified tag",
+      "value": "",
+      "type": "tags-dropdown"
+    },
+    {
+      "name": "amountSelectedtPosts",
+      "label": "Number of posts",
+      "group": "Sidebar",
+      "value": "3",
+      "type": "text"
+    },
+    {
+      "name": "separator",
+      "type": "separator",
+      "label": "Authors",
+      "group": "Sidebar",
+      "size": "big"
+    },
+    {
+      "name": "authors",
+      "label": "On / Off",
+      "group": "Sidebar",
+      "note": "Enable or disable the authors section",
+      "value": true,
+      "type": "checkbox"
+    },
+    {
+      "name": "authorsNumber",
+      "label": "Number of authors",
+      "group": "Sidebar",
+      "value": "5",
+      "type": "range",
+      "min": 1,
+      "max": 10,
+      "step": 1
+    },
+    {
+      "name": "fontSize",
+      "label": "Font size",
+      "group": "Fonts",
+      "note": "The font-size of the root element in REM unit",
+      "value": "1",
+      "type": "range",
+      "min": 1,
+      "max": 3,
+      "step": 0.05
+    },
+    {
+      "name": "bodyFont",
+      "label": "Body font",
+      "group": "Fonts",
+      "note": "Default is the browser sans-serif; choose an alternative if desired.",
+      "value": "system-ui",
+      "type": "select",
+      "options": [
+        {
+          "label": "System sans-serif",
+          "value": "system-ui"
+        },
+        {
+          "label": "Classic serif",
+          "value": "serif-classic"
+        },
+        {
+          "label": "Modern serif",
+          "value": "serif-modern"
+        }
+      ]
+    },
+    {
+      "name": "faviconUpload",
+      "label": "Upload favicon file",
+      "group": "Additional",
+      "note": "The ideal size of a favicon is 16x16 pixels. Save your favicon as either favicon.png or favicon.ico",
+      "value": "",
+      "type": "smallupload",
+      "upload": true
+    },
+    {
+      "name": "faviconExtension",
+      "label": "Favicon extension",
+      "group": "Additional",
+      "value": "image/x-icon",
+      "type": "select",
+      "options": [
+        {
+          "label": ".ico",
+          "value": "image/x-icon"
+        },
+        {
+          "label": ".png",
+          "value": "image/png"
+        }
+      ]
+    }
+  ],
+  "authorConfig": [
+    {
+      "name": "displayPostCounter",
+      "label": "Display post counter",
+      "value": 1,
+      "type": "select",
+      "options": [
+        {
+          "label": "Enabled",
+          "value": 1
+        },
+        {
+          "label": "Disabled",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "postConfig": [
+    {
+      "name": "displayAuthorBio",
+      "label": "Display author bio",
+      "value": 1,
+      "type": "select",
+      "options": [
+        {
+          "label": "Enabled",
+          "value": 1
+        },
+        {
+          "label": "Disabled",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "pageConfig": [
+    {
+      "name": "showBackLink",
+      "label": "Show back link",
+      "value": 0,
+      "type": "select",
+      "options": [
+        {
+          "label": "Disabled",
+          "value": 0
+        },
+        {
+          "label": "Enabled",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "backLinkLabel",
+      "label": "Back link label",
+      "value": "Back to posts",
+      "type": "text"
+    },
+    {
+      "name": "backLinkUrl",
+      "label": "Back link URL",
+      "value": "/posts/",
+      "type": "text"
+    },
+    {
+      "name": "displayAuthorBio",
+      "label": "Display author bio",
+      "value": 1,
+      "type": "select",
+      "options": [
+        {
+          "label": "Enabled",
+          "value": 1
+        },
+        {
+          "label": "Disabled",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "displayChildPages",
+      "label": "Display child pages",
+      "value": 0,
+      "type": "select",
+      "options": [
+        {
+          "label": "Enabled",
+          "value": 1
+        },
+        {
+          "label": "Disabled",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "tagConfig": [
+    {
+      "name": "showBackLink",
+      "label": "Show back link",
+      "value": 0,
+      "type": "select",
+      "options": [
+        {
+          "label": "Disabled",
+          "value": 0
+        },
+        {
+          "label": "Enabled",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "backLinkLabel",
+      "label": "Back link label",
+      "value": "Back to posts",
+      "type": "text"
+    },
+    {
+      "name": "backLinkUrl",
+      "label": "Back link URL",
+      "value": "/posts/",
+      "type": "text"
+    },
+    {
+      "name": "displayPostCounter",
+      "label": "Display post counter",
+      "value": 1,
+      "type": "select",
+      "options": [
+        {
+          "label": "Enabled",
+          "value": 1
+        },
+        {
+          "label": "Disabled",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "files": {
+    "ignoreAssets": ["scss", ".DS_Store"],
+    "assetsPath": "assets",
+    "partialsPath": "partials",
+    "responsiveImages": {
+      "contentImages": {
+        "sizes": "(max-width: 1200px) 100vw, 1200px",
+        "dimensions": {
+          "xs": {
+            "width": 300,
+            "height": "auto"
+          },
+          "sm": {
+            "width": 480,
+            "height": "auto"
+          },
+          "md": {
+            "width": 749,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1200,
+            "height": "auto"
+          }
+        }
+      },
+      "featuredImages": {
+        "sizes": "(max-width: 1200px) 100vw, 1200px",
+        "dimensions": {
+          "xs": {
+            "width": 300,
+            "height": 200
+          },
+          "sm": {
+            "width": 480,
+            "height": "auto"
+          },
+          "md": {
+            "width": 749,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1200,
+            "height": "auto"
+          }
+        }
+      },
+      "tagImages": {
+        "sizes": "(max-width: 1200px) 100vw, 1200px",
+        "dimensions": {
+          "xs": {
+            "width": 300,
+            "height": 200
+          },
+          "sm": {
+            "width": 480,
+            "height": "auto"
+          },
+          "md": {
+            "width": 749,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1200,
+            "height": "auto"
+          }
+        }
+      },
+      "authorImages": {
+        "sizes": "(max-width: 1200px) 100vw, 1200px",
+        "dimensions": {
+          "xs": {
+            "width": 300,
+            "height": 200
+          },
+          "sm": {
+            "width": 480,
+            "height": "auto"
+          },
+          "md": {
+            "width": 749,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1200,
+            "height": "auto"
+          }
+        }
+      },
+      "optionImages": {
+        "sizes": "(max-width: 1200px) 100vw, 1200px",
+        "dimensions": {
+          "xs": {
+            "width": 300,
+            "height": 200
+          },
+          "sm": {
+            "width": 480,
+            "height": "auto"
+          },
+          "md": {
+            "width": 749,
+            "height": "auto"
+          },
+          "xl": {
+            "width": 1200,
+            "height": "auto"
+          }
+        }
+      },
+      "galleryImages": {
+        "sizes": "",
+        "dimensions": {
+          "thumbnail": {
+            "width": 720,
+            "height": "auto"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{{> head}}
+{{> navbar}}
+<main class="posts-page">
+   <div class="container">
+      <header class="posts-page__header">
+         <h1>{{ translate 'postsPage.title' }}</h1>
+      </header>
+
+      <div class="posts-page__list">
+         {{#each posts}}
+            <article class="posts-page__item">
+               <h2>
+                  <a href="{{url}}">{{title}}</a>
+               </h2>
+               <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                  {{date createdAt}}
+               </time>
+               {{#if hasCustomExcerpt}}
+                  {{{ excerpt }}}
+               {{else}}
+                  <p>{{{ excerpt }}}</p>
+               {{/if}}
+            </article>
+         {{/each}}
+      </div>
+
+      {{> pagination}}
+   </div>
+</main>
+{{> footer}}
