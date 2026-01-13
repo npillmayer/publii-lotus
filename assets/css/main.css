@@ -42,7 +42,13 @@ body {
    row-gap: 2rem;
 }
 
-body.home-template {
+body.home-template,
+body.blogindex-template,
+body.page-template,
+body.tag-template,
+body.tag-pagination-template,
+body.author-template,
+body.author-pagination-template {
    grid-template-columns: minmax(1.5rem, 1fr) minmax(0, var(--container)) minmax(1.5rem, 1fr);
    grid-template-areas:
       ". main ."
@@ -52,8 +58,8 @@ body.home-template {
 
 body.home-template aside,
 body.home-template header,
-body.posts-template aside,
-body.posts-template header,
+body.blogindex-template aside,
+body.blogindex-template header,
 body.tag-template aside,
 body.tag-template header,
 body.tag-pagination-template aside,
@@ -367,6 +373,15 @@ header .menu {
    grid-template-columns: minmax(0, 1fr) 260px;
    gap: 2.5rem;
    align-items: start;
+}
+
+.posts-layout__main,
+.posts-layout__sidebar {
+   margin-top: 0;
+}
+
+.posts-layout__sidebar {
+   align-self: start;
 }
 
 .posts-layout__sidebar {
