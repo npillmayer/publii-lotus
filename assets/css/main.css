@@ -58,7 +58,6 @@ body.author-pagination-template {
 
 body.home-template aside,
 body.home-template header,
-body.blogindex-template aside,
 body.blogindex-template header,
 body.tag-template aside,
 body.tag-template header,
@@ -93,7 +92,7 @@ main.home {
    padding-top: 0;
 }
 
-aside {
+body > aside {
    grid-area: sidebar;
 }
 
@@ -189,7 +188,6 @@ header .menu {
    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-.menu > li:first-child a,
 .menu .active > a {
    background: var(--accent);
    color: #ffffff;
@@ -354,7 +352,10 @@ header .menu {
 
 /*** Posts page ***/
 .posts-page {
-   padding: 3rem 0 4rem;
+   padding: 0 0 4rem;
+}
+.posts-page > .container {
+   padding-top: 3rem;
 }
 
 .posts-page__header h1 {
