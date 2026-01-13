@@ -1,7 +1,40 @@
 {{! Author page; this file renders a tag page containing a list of the latest posts }}
 {{> head}}
-{{> navbar}}
-<main>
+<main class="posts-page">
+   <section class="masthead">
+      <div class="masthead__portrait">
+         {{#if @config.custom.homePortraitLink}}
+         <a href="{{@config.custom.homePortraitLink}}" class="masthead__portrait-link">
+         {{/if}}
+         {{#if @website.logo}}
+            <img
+               src="{{@website.logo}}"
+               class="masthead__logo {{#checkIf @config.custom.homeLogoFit '==' 'contain'}}masthead__logo--contain{{/checkIf}}"
+               {{lazyload "eager"}}
+               alt="{{@website.name}}">
+         {{else}}
+            {{#if @config.custom.homePortrait}}
+            <img
+               src="{{@config.custom.homePortrait}}"
+               {{#if @config.site.responsiveImages}}
+                  {{responsiveImageAttributes @config.custom.homePortrait}}
+               {{/if}}
+               {{lazyload "eager"}}
+               {{imageDimensions @config.custom.homePortrait}}
+               alt="{{@config.custom.homePortraitAlt}}">
+            {{else}}
+            <img
+               src="{{@website.assetsUrl}}/img/rl-face-stripe-lightgrey.png"
+               {{lazyload "eager"}}
+               alt="Robert Lemann portrait">
+            {{/if}}
+         {{/if}}
+         {{#if @config.custom.homePortraitLink}}
+         </a>
+         {{/if}}
+      </div>
+   </section>
+   <div class="container">
    
    {{! indicates the author's context }}
    {{#author}}
@@ -118,12 +151,14 @@
 
          {{! post author }}
          {{#author}}
-            <img  
-               src="{{avatarImage.url}}" 
-               {{lazyload "lazy"}} 
-               alt="{{avatarImage.alt}}" 
-               height="{{avatarImage.height}}"  
-               width="{{avatarImage.width}}">
+            {{#if avatar}}
+               <img  
+                  src="{{avatarImage.url}}" 
+                  {{lazyload "lazy"}} 
+                  alt="{{avatarImage.alt}}" 
+                  height="{{avatarImage.height}}"  
+                  width="{{avatarImage.width}}">
+            {{/if}}
             <a href="{{url}}">{{name}}</a>
          {{/author}}
          {{! /post author }}
@@ -146,7 +181,7 @@
       </article>
    {{/each}}
    {{! /loop that generates a list of posts }}
-   
+   </div>
 </main>
 <aside>
    {{> sidebar}}

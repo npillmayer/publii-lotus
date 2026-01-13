@@ -443,6 +443,22 @@ header .menu {
    margin-bottom: 0.7rem;
 }
 
+/*** Author page ***/
+.author-template main h1 {
+   margin: 0 0 0.6rem;
+   color: var(--accent-muted);
+   font-family: var(--font-heading);
+}
+
+.author-template main h1 + div,
+.author-template main h1 + p {
+   margin-top: 0;
+}
+
+.author-template main article:first-of-type {
+   margin-top: 2rem;
+}
+
 @media (max-width: 960px) {
    .posts-layout {
       grid-template-columns: 1fr;

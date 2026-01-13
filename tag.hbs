@@ -136,12 +136,14 @@
 
          {{! post author }}
          {{#author}}
-            <img  
-               src="{{avatarImage.url}}" 
-               {{lazyload "lazy"}} 
-               alt="{{avatarImage.alt}}" 
-               height="{{avatarImage.height}}"  
-               width="{{avatarImage.width}}">
+            {{#if avatar}}
+               <img  
+                  src="{{avatarImage.url}}" 
+                  {{lazyload "lazy"}} 
+                  alt="{{avatarImage.alt}}" 
+                  height="{{avatarImage.height}}"  
+                  width="{{avatarImage.width}}">
+            {{/if}}
             <a href="{{url}}">{{name}}</a>
          {{/author}}
          {{! /post author }}
