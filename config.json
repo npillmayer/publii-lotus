@@ -165,7 +165,7 @@
       "name": "homeTagline",
       "label": "Tagline",
       "group": "Homepage",
-      "value": "this is a tagline about me",
+      "value": "This is a tagline about me",
       "type": "text"
     },
     {
@@ -236,7 +236,7 @@
       "name": "topicLinkUrl",
       "label": "Column 1 link URL",
       "group": "Homepage",
-      "value": "/about/",
+      "value": "/",
       "type": "text"
     },
     {
@@ -292,7 +292,7 @@
       "name": "column3LinkUrl",
       "label": "Column 3 link URL",
       "group": "Homepage",
-      "value": "/posts/",
+      "value": "/",
       "type": "text"
     },
     {
