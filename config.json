@@ -49,11 +49,6 @@
       "name": "Main menu",
       "desc": "",
       "maxLevels": -1
-    },
-    "footerMenu": {
-      "name": "Footer menu",
-      "desc": "",
-      "maxLevels": 1
     }
   },
   "config": [
@@ -113,7 +108,7 @@
     },
     {
       "name": "homePortrait",
-      "label": "Portrait image",
+      "label": "Logo band image",
       "group": "Homepage",
       "value": "",
       "type": "upload",
@@ -121,7 +116,7 @@
     },
     {
       "name": "homePortraitLink",
-      "label": "Portrait link URL",
+      "label": "Logo link URL",
       "group": "Homepage",
       "value": "",
       "type": "text"
@@ -146,24 +141,24 @@
     },
     {
       "name": "homeHeroHeight",
-      "label": "Portrait height",
+      "label": "Logo band height",
       "group": "Homepage",
       "note": "Controls the vertical size of the top hero band.",
-      "value": "150px",
+      "value": "130px",
       "type": "text"
     },
     {
       "name": "homePortraitAlt",
       "label": "Portrait image alt text",
       "group": "Homepage",
-      "value": "Site log masthead",
+      "value": "Site logo masthead",
       "type": "text"
     },
     {
       "name": "homeTitle",
-      "label": "Name",
+      "label": "Owner name",
       "group": "Homepage",
-      "value": "Author",
+      "value": "Myself",
       "type": "text"
     },
     {
@@ -206,7 +201,7 @@
       "name": "contactHtml",
       "label": "Get in touch content",
       "group": "Homepage",
-      "value": "<h2>Get in Touch</h2><p>Subscribe to infographics, short stories and other bonus material</p><p><a href=\"/contact/\">Contact</a></p>",
+      "value": "<h2>Get in Touch</h2><p>Leave a comment or subscribe to our newsletter</p><p><a href=\"/contact/\">Contact</a></p>",
       "type": "wysiwyg"
     },
     {
@@ -220,21 +215,21 @@
       "name": "topicTitle",
       "label": "Column 1 title",
       "group": "Homepage",
-      "value": "What's it about?",
+      "value": "Column 1 Title",
       "type": "text"
     },
     {
       "name": "topicText",
       "label": "Column 1 text",
       "group": "Homepage",
-      "value": "I am interested in just about everything, but most of the time I focus on science, culture & society, and writing suspense stories. I believe in a growth mind-set and will never stop learning, meeting like-minded people along the way.",
+      "value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
       "type": "textarea"
     },
     {
       "name": "topicLinkLabel",
       "label": "Column 1 link label",
       "group": "Homepage",
-      "value": "learn more",
+      "value": "explore more",
       "type": "text"
     },
     {
@@ -245,56 +240,56 @@
       "type": "text"
     },
     {
-      "name": "booksTitle",
+      "name": "column2Title",
       "label": "Column 2 title",
       "group": "Homepage",
-      "value": "Books",
+      "value": "Column 2 Title",
       "type": "text"
     },
     {
-      "name": "booksText",
+      "name": "column2Text",
       "label": "Column 2 text",
       "group": "Homepage",
-      "value": "I write fiction books, mostly thrillers, as a suspense part-time undertaking. I usually process some interesting insights I've gained, wrapping them in riveting stories. They are available in multiple languages, most easily accessed on Amazon.",
+      "value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
       "type": "textarea"
     },
     {
-      "name": "booksLinkLabel",
+      "name": "column2LinkLabel",
       "label": "Column 2 link label",
       "group": "Homepage",
-      "value": "explore Books",
+      "value": "explore more",
       "type": "text"
     },
     {
-      "name": "booksLinkUrl",
+      "name": "column2LinkUrl",
       "label": "Column 2 link URL",
       "group": "Homepage",
-      "value": "/books/",
+      "value": "/",
       "type": "text"
     },
     {
-      "name": "articlesTitle",
+      "name": "column3Title",
       "label": "Column 3 title",
       "group": "Homepage",
-      "value": "Articles",
+      "value": "Column 3 Title",
       "type": "text"
     },
     {
-      "name": "articlesText",
+      "name": "column3Text",
       "label": "Column 3 text",
       "group": "Homepage",
-      "value": "I collect the insights of my endeavour of lifelong learning by summing them up in non-fiction articles, in order to engage with interesting people. All my articles can be found here, although some of them may have been published elsewhere, too.",
+      "value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
       "type": "textarea"
     },
     {
-      "name": "articlesLinkLabel",
+      "name": "column3LinkLabel",
       "label": "Column 3 link label",
       "group": "Homepage",
-      "value": "read Articles",
+      "value": "explore more",
       "type": "text"
     },
     {
-      "name": "articlesLinkUrl",
+      "name": "column3LinkUrl",
       "label": "Column 3 link URL",
       "group": "Homepage",
       "value": "/posts/",
@@ -325,7 +320,7 @@
       "name": "copyrightText",
       "label": "Copyright text",
       "group": "Footer",
-      "value": "&copy; 2026 Your Name. All rights reserved.",
+      "value": "&copy; [ Your Name ]. All rights reserved.",
       "type": "text"
     },
     {

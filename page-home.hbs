@@ -24,7 +24,7 @@
                 {{else}}
                 <img
                     src="{{@website.assetsUrl}}/img/lotus-masthead.svg" {{lazyload "eager"}}
-                    alt="Site log masthead">
+                    alt="Site logo masthead">
                 {{/if}}
             {{/if}}
             {{#if @config.custom.homePortraitLink}}
@@ -84,20 +84,20 @@
                     {{/if}}
                 </div>
                 <div class="info__card">
-                    <h3>{{@config.custom.booksTitle}}</h3>
-                    <p>{{@config.custom.booksText}}</p>
-                    {{#if @config.custom.booksLinkUrl}}
-                        <a class="text-link" href="{{@config.custom.booksLinkUrl}}">
-                            {{@config.custom.booksLinkLabel}}
+                    <h3>{{@config.custom.column2Title}}</h3>
+                    <p>{{@config.custom.column2Text}}</p>
+                    {{#if @config.custom.column2LinkUrl}}
+                        <a class="text-link" href="{{@config.custom.column2LinkUrl}}">
+                            {{@config.custom.column2LinkLabel}}
                         </a>
                     {{/if}}
                 </div>
                 <div class="info__card">
-                    <h3>{{@config.custom.articlesTitle}}</h3>
-                    <p>{{@config.custom.articlesText}}</p>
-                    {{#if @config.custom.articlesLinkUrl}}
-                        <a class="text-link" href="{{@config.custom.articlesLinkUrl}}">
-                            {{@config.custom.articlesLinkLabel}}
+                    <h3>{{@config.custom.column3Title}}</h3>
+                    <p>{{@config.custom.column3Text}}</p>
+                    {{#if @config.custom.column3LinkUrl}}
+                        <a class="text-link" href="{{@config.custom.column3LinkUrl}}">
+                            {{@config.custom.column3LinkLabel}}
                         </a>
                     {{/if}}
                 </div>

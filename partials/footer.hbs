@@ -1,11 +1,5 @@
 <footer class="footer">
    <div class="container footer__inner">
-      {{#if menus.footerMenu}}
-         <nav class="footer__nav">
-            {{> menu menus.footerMenu}}
-         </nav>
-      {{/if}}
-
       {{#if @config.custom.copyrightText}}
          <div class="footer__copyright">
             {{{@config.custom.copyrightText}}}
