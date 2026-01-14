@@ -24,9 +24,8 @@
                alt="{{@config.custom.homePortraitAlt}}">
             {{else}}
             <img
-               src="{{@website.assetsUrl}}/img/rl-face-stripe-lightgrey.png"
-               {{lazyload "eager"}}
-               alt="Robert Lemann portrait">
+               src="{{@website.assetsUrl}}/img/lotus-masthead.svg" {{lazyload "eager"}}
+               alt="Site log masthead">
             {{/if}}
          {{/if}}
          {{#if @config.custom.homePortraitLink}}
@@ -35,7 +34,7 @@
       </div>
    </section>
    <div class="container">
-   
+
    <h1>
       {{ translate 'tags.tagsPageTitle' }}
       <sup>({{tagsNumber}})</sup>
@@ -77,16 +76,16 @@
             {{! /tag name }}
 
             {{! number of posts in the tag }}
-            <span>{{postsNumber}} {{ translate "tags.post" (math postsNumber '+' 0)}} </span> 
+            <span>{{postsNumber}} {{ translate "tags.post" (math postsNumber '+' 0)}} </span>
             {{! /number of posts in the tag }}
 
             {{! tag description }}
             {{#if description}}
-               <div> {{{description}}} </div>                   
+               <div> {{{description}}} </div>
             {{/if}}
             {{! /tag description }}
 
-            
+
          </li>
       {{/each}}
       {{! /loop that generates a list of tags }}
@@ -95,7 +94,7 @@
    </div>
 </main>
 <aside>
-   {{> sidebar}} 
+   {{> sidebar}}
 </aside>
 
 {{> footer}}

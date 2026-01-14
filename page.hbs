@@ -24,9 +24,8 @@
                alt="{{@config.custom.homePortraitAlt}}">
             {{else}}
             <img
-               src="{{@website.assetsUrl}}/img/rl-face-stripe-lightgrey.png"
-               {{lazyload "eager"}}
-               alt="Robert Lemann portrait">
+               src="{{@website.assetsUrl}}/img/lotus-masthead.svg" {{lazyload "eager"}}
+               alt="Site log masthead">
             {{/if}}
          {{/if}}
          {{#if @config.custom.homePortraitLink}}
@@ -131,10 +130,10 @@
                   {{! checks if an author avatar exists }}
                   {{#if avatar}}
                      <img
-                        src="{{avatarImage.url}}" 
-                        {{ lazyload "lazy" }} 
-                        alt="{{avatarImage.alt}}" 
-                        height="{{avatarImage.height}}" 
+                        src="{{avatarImage.url}}"
+                        {{ lazyload "lazy" }}
+                        alt="{{avatarImage.alt}}"
+                        height="{{avatarImage.height}}"
                         width="{{avatarImage.width}}">
                   {{/if}}
                   {{! /checks if an author avatar exists }}
@@ -165,10 +164,10 @@
          {{! Checks if subpages exist }}
          {{#if subpages}}
             <div class="subpages">
-               
+
                {{! Displays the heading for child pages }}
                <h2>{{ translate 'page.childPages' }}</h2>
-               
+
                {{! Displays the list of subpages }}
                <ul>
                   {{> subpages-list}}

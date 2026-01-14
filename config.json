@@ -156,7 +156,7 @@
       "name": "homePortraitAlt",
       "label": "Portrait image alt text",
       "group": "Homepage",
-      "value": "Robert Lemann portrait",
+      "value": "Site log masthead",
       "type": "text"
     },
     {
@@ -192,7 +192,7 @@
       "name": "bannerImageAlt",
       "label": "Banner image alt text",
       "group": "Homepage",
-      "value": "Typewriter on wooden desk",
+      "value": "Hero image",
       "type": "text"
     },
     {
@@ -307,34 +307,34 @@
       "group": "Posts",
       "size": "big"
     },
-        {
-            "name": "postsPageTitle",
-            "label": "Posts page title",
-            "group": "Posts",
-            "value": "Posts",
-            "type": "text"
-        },
-        {
-            "name": "separator",
-            "type": "separator",
-            "label": "Footer",
-            "group": "Footer",
-            "size": "big"
-        },
-        {
-            "name": "copyrightText",
-            "label": "Copyright text",
-            "group": "Footer",
-            "value": "&copy; 2026 Your Name. All rights reserved.",
-            "type": "text"
-        },
-        {
-            "name": "backToTopButton",
-            "label": "Back to top button",
-            "group": "Footer",
-            "value": false,
-            "type": "checkbox"
-        },
+    {
+      "name": "postsPageTitle",
+      "label": "Posts page title",
+      "group": "Posts",
+      "value": "Posts",
+      "type": "text"
+    },
+    {
+      "name": "separator",
+      "type": "separator",
+      "label": "Footer",
+      "group": "Footer",
+      "size": "big"
+    },
+    {
+      "name": "copyrightText",
+      "label": "Copyright text",
+      "group": "Footer",
+      "value": "&copy; 2026 Your Name. All rights reserved.",
+      "type": "text"
+    },
+    {
+      "name": "backToTopButton",
+      "label": "Back to top button",
+      "group": "Footer",
+      "value": false,
+      "type": "checkbox"
+    },
     {
       "name": "separator",
       "type": "separator",

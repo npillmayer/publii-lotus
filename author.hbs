@@ -24,9 +24,8 @@
                alt="{{@config.custom.homePortraitAlt}}">
             {{else}}
             <img
-               src="{{@website.assetsUrl}}/img/rl-face-stripe-lightgrey.png"
-               {{lazyload "eager"}}
-               alt="Robert Lemann portrait">
+               src="{{@website.assetsUrl}}/img/lotus-masthead.svg" {{lazyload "eager"}}
+               alt="Site log masthead">
             {{/if}}
          {{/if}}
          {{#if @config.custom.homePortraitLink}}
@@ -35,7 +34,7 @@
       </div>
    </section>
    <div class="container">
-   
+
    {{! indicates the author's context }}
    {{#author}}
 
@@ -61,10 +60,10 @@
                      <figcaption>
                         {{caption}}
                         {{credits}}
-                     </figcaption>                      
+                     </figcaption>
                   {{/checkIfAny}}
                   {{! /checks if a caption and credits exist  }}
-                  
+
             </figure>
          {{/if}}
          {{! /checks if an image exists }}
@@ -73,11 +72,11 @@
 
       {{! check if an author avatar exists }}
       {{#if avatar}}
-         <img 
-            src="{{avatarImage.url}}" 
-            {{ lazyload "eager" }} 
-            alt="{{avatarImage.alt}}" 
-            height="{{avatarImage.height}}" 
+         <img
+            src="{{avatarImage.url}}"
+            {{ lazyload "eager" }}
+            alt="{{avatarImage.alt}}"
+            height="{{avatarImage.height}}"
             width="{{avatarImage.width}}">
       {{/if}}
       {{! /check if an author avatar exists }}
@@ -147,11 +146,11 @@
          {{! post author }}
          {{#author}}
             {{#if avatar}}
-               <img  
-                  src="{{avatarImage.url}}" 
-                  {{lazyload "lazy"}} 
-                  alt="{{avatarImage.alt}}" 
-                  height="{{avatarImage.height}}"  
+               <img
+                  src="{{avatarImage.url}}"
+                  {{lazyload "lazy"}}
+                  alt="{{avatarImage.alt}}"
+                  height="{{avatarImage.height}}"
                   width="{{avatarImage.width}}">
             {{/if}}
             <a href="{{url}}">{{name}}</a>
